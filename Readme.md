@@ -19,17 +19,17 @@ Important: During installation, check the box that says:
 "Add Python to PATH"
 Verify the installation:
 python --version
-# or
+or
 python3 --version
 Should return: Python 3.10.12
 
 ## Python Packages
 
-# (Optional) Create a Virtual Environment:
+(Optional) Create a Virtual Environment:
 python -m venv venv
 For Windows: venv\Scripts\activate
 
-# Install Requirements:
+Install Requirements:
 pip install -r requirements.txt
 Make sure your terminal is in the project directory when running this command.
 
@@ -46,18 +46,18 @@ Download from: https://googlechromelabs.github.io/chrome-for-testing/
 Ensure you also have the correct version of ChromeDriver that matches your browser version.
 
 ## Set Your Chat URL
-# Open TTS.py and look for this Section:
+Open TTS.py and look for this Section:
 ─── CONFIG ────────────────────────────────────────────────────────────────────
 PIPER_EXE     = "./piper/piper.exe"
 PIPER_MODEL   = "./models/en_US-amy-medium.onnx"
-# SITE          = "https://twitch.tv/YOURCHANNEL"
+SITE          = "https://twitch.tv/YOURCHANNEL"     <-----------
 SPOKEN_FILE   = "spoken_messages.json"
 LINK_PATTERN  = re.compile(r"https?://\S+|www\.\S+")
 
 Change it to your own Twitch or Truffle chat URL:
 
 site = "https://www.twitch.tv/YOUR_CHANNEL_NAME"
-# or
+or
 site = "https://chat.truffle.vip/browser-source/your-org/scene-x"
 
 ## Create filter.json
@@ -85,8 +85,8 @@ models/
 Open TTS.py and look for this Section:
 ─── CONFIG ────────────────────────────────────────────────────────────────────
 PIPER_EXE     = "./piper/piper.exe"
-# PIPER_MODEL   = "./models/en_US-amy-medium.onnx"
-SITE          = "https://twitch.tv/YOURCHANNEL"
+PIPER_MODEL   = "./models/en_US-amy-medium.onnx"
+SITE          = "https://twitch.tv/YOURCHANNEL"     <-----------
 SPOKEN_FILE   = "spoken_messages.json"
 LINK_PATTERN  = re.compile(r"https?://\S+|www\.\S+")
 
