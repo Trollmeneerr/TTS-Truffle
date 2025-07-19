@@ -47,7 +47,7 @@ Ensure you also have the correct version of ChromeDriver that matches your brows
 
 ## Set Your Chat URL
 Open TTS.py and look for this Section:
-─── CONFIG ────────────────────────────────────────────────────────────────────
+CONFIG ─────────────────────────────────────────
 PIPER_EXE     = "./piper/piper.exe"
 PIPER_MODEL   = "./models/en_US-amy-medium.onnx"
 SITE          = "https://twitch.tv/YOURCHANNEL"     <-----------
@@ -83,7 +83,7 @@ models/
     └── donwloaded_model-medium.onnx.json  | Config
 
 Open TTS.py and look for this Section:
-─── CONFIG ────────────────────────────────────────────────────────────────────
+CONFIG ─────────────────────────────────────────
 PIPER_EXE     = "./piper/piper.exe"
 PIPER_MODEL   = "./models/en_US-amy-medium.onnx"
 SITE          = "https://twitch.tv/YOURCHANNEL"     <-----------
