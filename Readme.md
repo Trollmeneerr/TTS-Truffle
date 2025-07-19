@@ -3,12 +3,14 @@
 ## ✨ Features
 
 * Text-to-speech for Twitch & Truffle chat
-* Filters out banned or repeated messages
+* Filters out banned messages
 * Easy to switch between TTS voice models
 * Fast response time using local Piper models
 * Fully customizable and open-source
 
 TTS Twitch and Truffle is a tool that reads messages from Twitch or Truffle chat out loud using Piper TTS. 
+
+**Not available for Youtube right now!**
 
 It's perfect for streamers who want chat interactions to be heard in real time.
 
