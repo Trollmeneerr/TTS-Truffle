@@ -24,7 +24,6 @@ from selenium.common.exceptions import (
 PIPER_EXE     = "./piper/piper.exe"
 PIPER_MODEL   = "./models/en_US-amy-medium.onnx"
 SITE          = "https://twitch.tv/YOURCHANNEL"
-# SITE          = "http://localhost:8000"
 SPOKEN_FILE   = "spoken_messages.json"
 LINK_PATTERN  = re.compile(r"https?://\S+|www\.\S+")
 
@@ -41,9 +40,14 @@ prefix_enabled = True
 index = 0
 
 # ─── BANNED WORDS ──────────────────────────────────────────────────────────────
-
+if not os.path.exists('filter.json'):
+    print("filter.json not found, creating default with no banned words.")
+    with open('filter.json', 'w', encoding='utf-8') as f:
+        json.dump({"banned_words": []}, f, indent=2)
+        
 with open('filter.json', 'r', encoding='utf-8') as f:
     BANNED_WORDS = json.load(f).get('banned_words', [])
+
 # ─── HOTKEYS ───────────────────────────────────────────────────────────────────
 def toggle_tts():
     global tts_enabled
