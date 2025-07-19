@@ -52,7 +52,6 @@ PIPER_EXE     = "./piper/piper.exe"
 PIPER_MODEL   = "./models/en_US-amy-medium.onnx"
 SITE          = "https://twitch.tv/YOURCHANNEL"     <-----------
 SPOKEN_FILE   = "spoken_messages.json"
-LINK_PATTERN  = re.compile(r"https?://\S+|www\.\S+")
 
 Change it to your own Twitch or Truffle chat URL:
 
@@ -88,7 +87,6 @@ PIPER_EXE     = "./piper/piper.exe"
 PIPER_MODEL   = "./models/en_US-amy-medium.onnx"
 SITE          = "https://twitch.tv/YOURCHANNEL"     <-----------
 SPOKEN_FILE   = "spoken_messages.json"
-LINK_PATTERN  = re.compile(r"https?://\S+|www\.\S+")
 
 And change it to you prefferd voice model you want to use, for example:
 PIPER_MODEL = "./models/donwloaded_model-medium.onnx"
