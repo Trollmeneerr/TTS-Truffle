@@ -202,8 +202,10 @@ To close the program you need to select the terminal and press ctrl+c or close t
 * TTS may not work properly if Truffle Chat isn’t open in an active Chrome tab or OBS browser source.
 
 
-🙌 Credits
+## Credits
 
-truffle.vip
+Truffle.vip
+
 Piper TTS
+
 Vibe Coded by @Trollmeneerr
