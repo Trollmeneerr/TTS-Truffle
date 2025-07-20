@@ -13,6 +13,10 @@ This is a tool that reads messages from Truffle chat out loud using Piper TTS.
 
 It's perfect for streamers who want chat interactions to be heard in real time.
 
+Really quick and rough installation, setup and usage video:
+
+    https://youtu.be/qvmSM1zk7cQ
+
 ## Setting up truffle and repository
 If you're new to Truffle, here’s a quick guide to get you started.
 
@@ -36,12 +40,16 @@ If you're new to Truffle, here’s a quick guide to get you started.
 
 **You can skip customizing the chat if you don't want to use it**
 
+Download the Repository as a .zip
+
+**OR**
+
 Clone the Repository
 Start by cloning this GitHub repository:
 
     # Using git
     git clone https://github.com/Trollmeneerr/TTS-Truffle.git
-    cd TTS-Truffle
+    cd TTS-Truffle-main
 
 ## Install Python 3.10
 
@@ -200,7 +208,6 @@ To close the program you need to select the terminal and press ctrl+c or close t
 * If a user changes the SITE link without starting it with https:// or http://, the program may crash.
 * Pausing TTS can lead to a backlog of messages building up in the queue.
 * TTS may not work properly if Truffle Chat isn’t open in an active Chrome tab or OBS browser source.
-
 
 ## Credits
 
