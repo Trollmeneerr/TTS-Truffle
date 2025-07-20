@@ -169,7 +169,7 @@ Edit TTS.py and look for this Section:
 
 And change it to you prefferd voice model you want to use, for example:
 
-    PIPER_MODEL = "./models/donwloaded_model-medium.onnx"
+    PIPER_MODEL = "./models/downloaded_model-medium.onnx"
 
 The config file should be automatically be loaded aswel
 
@@ -194,6 +194,13 @@ You might see messages like this in your terminal:
 These are Chrome-related debug messages and can be safely ignored.
 
 To close the program you need to select the terminal and press ctrl+c or close the terminal window.
+
+## KNOWN ISSUES
+* Restarting the program mid-stream may cause previous messages to repeat until it catches up with new ones (even if "hide old messages" is enabled).
+* If a user changes the SITE link without starting it with https:// or http://, the program may crash.
+* Pausing TTS can lead to a backlog of messages building up in the queue.
+* TTS may not work properly if Truffle Chat isn’t open in an active Chrome tab or OBS browser source.
+
 
 🙌 Credits
 
