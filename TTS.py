@@ -23,8 +23,7 @@ from selenium.common.exceptions import (
 # ─── CONFIG ────────────────────────────────────────────────────────────────────
 PIPER_EXE     = "./piper/piper.exe"
 PIPER_MODEL   = "./models/en_US-amy-medium.onnx"    # Change this to your own model path if needed
-# SITE         = "https://chat.truffle.vip/browser-source/your-org/scene-x" # Change this to your own Truffle chat URL
-SITE         = "http://localhost:8000" 
+SITE         = "https://chat.truffle.vip/browser-source/your-org/scene-x" # Change this to your own Truffle chat URL
 SPOKEN_FILE   = "spoken_messages.json"
 LINK_PATTERN  = re.compile(r"https?://\S+|www\.\S+")
 
