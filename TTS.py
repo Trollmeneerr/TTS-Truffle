@@ -135,10 +135,6 @@ def scrape_truffle(driver, spoken):
 
     entries = driver.find_elements(By.XPATH, "//*[contains(@class, 'chat-message')]")
     queue = []
-    if not tts_enabled:
-        queue = []
-        print("TTS is disabled, skipping message processing.")
-        return
     for e in entries:
         try:
             msg_id = e.get_attribute('id')
@@ -160,6 +156,7 @@ def scrape_truffle(driver, spoken):
                                 full_txt = f"{name_txt} said {tts_txt}"
                                 queue.append(full_txt)
                                 print(f"Queued TTS: {full_txt}")
+                            
         except (NoSuchElementException, StaleElementReferenceException):
                 continue
 
