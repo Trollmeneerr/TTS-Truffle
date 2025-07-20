@@ -16,7 +16,7 @@ It's perfect for streamers who want chat interactions to be heard in real time.
 ## Setting up truffle and repository
 If you're new to Truffle, here’s a quick guide to get you started.
 
-(Optional, but recommend) Install the extension from the Chrome Web Store:
+**(Optional, but recommend)** Install the extension from the Chrome Web Store:
 
     https://chromewebstore.google.com/detail/truffle/bkkjeefjfjcfdfifddmkdmcpmaakmelp?pli=1
 
