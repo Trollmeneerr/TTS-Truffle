@@ -1,25 +1,47 @@
-## TTS Twitch and Truffle
-
 ## ✨ Features
 
-* Text-to-speech for Twitch & Truffle chat
+* Text-to-speech for Tuffle chat
 * Filters out banned messages
 * Easy to switch between TTS voice models
 * Fast response time using local Piper models
 * Fully customizable and open-source
+* Fully customizable HOTKEYS
 
-TTS Twitch and Truffle is a tool that reads messages from Twitch or Truffle chat out loud using Piper TTS. 
+This is a tool that reads messages from Truffle chat out loud using Piper TTS. 
 
-**Not available for Youtube right now!**
+**Not available for Youtube or Twitch directly right now!**
 
 It's perfect for streamers who want chat interactions to be heard in real time.
+
+## Setting up truffle and repository
+If you're new to Truffle, here’s a quick guide to get you started.
+
+(Optional, but recommend) Install the extension from the Chrome Web Store:
+
+    https://chromewebstore.google.com/detail/truffle/bkkjeefjfjcfdfifddmkdmcpmaakmelp?pli=1
+
+**Setting Up Your Account**
+
+* Go to https://app.truffle.vip
+* Sign up and link your platforms (like Twitch, YouTube, etc.)
+* Create an organization
+* In your org, go to Apps enable chat
+
+**Configure the Chat App**
+* Go to Settings of the chat App
+* Click on Manage OBS 
+* Create a scene
+* Copy the Browser Source Link
+* Enable Hide old messaged [90s]
+
+**You can skip customizing the chat if you don't want to use it**
 
 Clone the Repository
 Start by cloning this GitHub repository:
 
     # Using git
-    git clone https://github.com/Trollmeneerr/TTS-Twitch-and-Truffle.git
-    cd TTS-Twitch-and-Truffle
+    git clone https://github.com/Trollmeneerr/TTS-Truffle.git
+    cd TTS-Truffle
 
 ## Install Python 3.10
 
@@ -33,6 +55,8 @@ Download Python 3.10 from the official page:
 "Add Python to PATH"**
 
 Verify the installation:
+
+    # Run in terminal
 
     python --version
     # or
@@ -80,15 +104,13 @@ Edit TTS.py and look for this Section:
     # ─── CONFIG ───────────────────────────────────────
     PIPER_EXE     = "./piper/piper.exe" 
     PIPER_MODEL   = "./models/en_US-amy-medium.onnx"
-    SITE          = "https://twitch.tv/YOURCHANNEL"     <-----------
+    SITE          = "https://chat.truffle.vip/browser-source/your-org/scene-x"     <-----------
     SPOKEN_FILE   = "spoken_messages.json"`
     LINK_PATTERN  = re.compile(r"https?://\S+|www\.\S+")
 
-Change it to your own Twitch or Truffle chat URL:
+Change it to your own Truffle chat URL, my URL for example:
 
-    site = "https://www.twitch.tv/YOUR_CHANNEL_NAME"
-    # or
-    site = "https://chat.truffle.vip/browser-source/your-org/scene-x"
+    SITE = "https://chat.truffle.vip/browser-source/the-fridge/scene-1"
 
 ## Create filter.json
 The reason why i can't add this, is because there are words in there that i can't openly share on github, but i have made some instructions here to create your own!
@@ -102,6 +124,25 @@ Create a file in the root of the project called "filter.json" with the following
 This will filter out inappropriate messages from being spoken.
 
 P.S. It can trigger false positives in my case i had 95% accuracy!
+
+## Changing key binds/perfixes
+These are your controls for the TTS while it is running.
+
+If you want to change them here is a guide:
+
+Edit TTS.py and look for this section
+
+    # ─── HOTKEYS ──────────────────────────────────────
+    PREFIX        = "!tts" 
+    HOTKEY_SKIP   = ";"
+    HOTKEY_TOGGLE_PREFIX = "ctrl+alt+p"
+    HOTKEY_TOGGLE_TTS = "ctrl+alt+t"
+
+Here you can change:
+* The prefix that a message must start with to trigger TTS.
+* The hotkey for skipping the current message.
+* The hotkey for toggling whether the prefix is required.
+* The hotkey to pause or resume TTS.
 
 ## (OPTIONAL) Install other Piper TTS Models
 
@@ -122,7 +163,7 @@ Edit TTS.py and look for this Section:
     #─── CONFIG ──────────────────────────────────────
     PIPER_EXE     = "./piper/piper.exe"
     PIPER_MODEL   = "./models/en_US-amy-medium.onnx"    <-----------
-    SITE          = "https://twitch.tv/YOURCHANNEL"     
+    SITE          = "https://chat.truffle.vip/browser-source/the-fridge/scene-1"     
     SPOKEN_FILE   = "spoken_messages.json"
     LINK_PATTERN  = re.compile(r"https?://\S+|www\.\S+")
 
@@ -136,12 +177,10 @@ The config file should be automatically be loaded aswel
 
 After everything is configured you can run the program in your terminal like this:
 
-    # MAKE SURE YOUR IN: path-to-folder/TTS-Twitch-and-Truffle:
+    # MAKE SURE YOU'RE IN: path-to-folder/TTS-Truffle:
     Python.exe -m TTS
     or
     Python3 -m TTS
-
-
 
 Once running it will connect to the specified chat URL.
 
@@ -154,8 +193,10 @@ You might see messages like this in your terminal:
 
 These are Chrome-related debug messages and can be safely ignored.
 
+To close the program you need to select the terminal and press ctrl+c or close the terminal window.
+
 🙌 Credits
 
+truffle.vip
 Piper TTS
-
 Vibe Coded by @Trollmeneerr

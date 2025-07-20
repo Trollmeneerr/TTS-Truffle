@@ -17,6 +17,7 @@ eggs/
 lib/
 lib64/
 parts/
+/.vscode/
 sdist/
 var/
 wheels/
@@ -66,6 +67,10 @@ db.sqlite3-journal
 # Flask stuff:
 instance/
 .webassets-cache
+CHAT.py
+test.py
+spoken_messages.json
+testing/
 
 # Scrapy stuff:
 .scrapy
